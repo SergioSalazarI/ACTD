@@ -67,6 +67,9 @@ model.check_model()
 
 infer = VariableElimination(model)
 
+print("A continuación se imprimen las independencias del modelo.")
+print( model.get_independencies())
+
 ss = ["V","F"]
 
 for i,j in itertools.product(ss,ss):
