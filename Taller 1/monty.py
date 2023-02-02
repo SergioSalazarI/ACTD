@@ -25,5 +25,10 @@ model.check_model()
 
 infer = VariableElimination(model)
 
-posterior_p = infer.query(["C"], evidence={"U": 0, "A": 1})
+posterior_p = infer.query(["C"], evidence={"U": 1, "A": 2})
+#posterior_p = infer.query(["C"], evidence={"U": 1})
+#posterior_p = infer.query(["C"], evidence={"A": 1})
 print(posterior_p)
+
+print("A continuación se imprimen las independencias del modelo.")
+print( model.get_independencies())
